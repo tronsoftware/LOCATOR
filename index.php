@@ -2,11 +2,11 @@
 header("Content-Type: text/html;charset=UTF-8");
 require_once("./include/membersite_config.php");
 
-//if(!$fgmembersite->CheckLogin())
-//{
-//    $fgmembersite->RedirectToURL("login.php");
-//    exit;
-//}
+if(!$fgmembersite->CheckLogin())
+{
+    $fgmembersite->RedirectToURL("login.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -204,12 +204,10 @@ require_once("./include/membersite_config.php");
     var newInterval;
     var currentInterval;
 function load() {
-       // account = <?php echo json_encode($fgmembersite->GETaccountID()); ?>;
-       // user = <?php echo json_encode($fgmembersite->GETUserID()); ?>;
-       // pass = <?php echo json_encode($fgmembersite->GETpass()); ?>;
-account = 'sysadmin';
-user = 'prueba';
-pass = 'prueba';
+        account = <?php echo json_encode($fgmembersite->GETaccountID()); ?>;
+        user = <?php echo json_encode($fgmembersite->GETUserID()); ?>;
+        pass = <?php echo json_encode($fgmembersite->GETpass()); ?>;
+
         unidadesDIV = document.getElementById('UNunidades'); 
         groupDIV = document.getElementById('GroupList');      
         messages = document.getElementById('messages');
