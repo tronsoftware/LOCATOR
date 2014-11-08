@@ -8,7 +8,7 @@ if(isset($_POST['submitted']))
 {
    if($fgmembersite->Login())
    {
-        $fgmembersite->RedirectToURL("displaymap.php");
+        $fgmembersite->RedirectToURL("index.php");
    }
 }
 
