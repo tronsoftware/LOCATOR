@@ -1,0 +1,349 @@
+?
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    font-family: arial, helvetica, sans-serif;
+     font-size: 13px;
+      margin: 0;
+      -webkit-text-size-adjust: 100%;     
+}
+
+.page { left: 0; right: 0; top: 0; bottom: 0; }
+.row, .col, .page { overflow: hidden; position: absolute; }
+.row { left: 0; right: 0; }
+.col { top: 0; bottom: 0; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.scroll-y { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.fill, .pane { position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100% }
+.pane { display: none; }
+
+#map {
+    height: 100%;
+    width:100%;
+    border:1px;
+    border-style:solid;
+    background-color:#eee;
+}
+
+#messages {
+background:#dfdfdf url(../images/messages.gif)repeat-x;
+    height: 100%;
+  background-size:contain;
+    border:1px;
+	border-style:solid;
+    background-color: #eee;
+    padding:1px;
+}
+#unidades {
+    float: left;
+    padding : 0.5em;
+
+}
+#settings {
+    float: right;
+    padding : 0.5em;
+}
+
+#BTNgrupo {
+    padding : 2px;
+    display:block; /* change this from inline-block */
+    height: 40px;
+    width:60%; /* setting the width */
+    float:left;
+    margin:6px auto; /* this will center  it */
+    position:relative;
+    font-style:normal;
+    font-weight:normal;
+    font-family:"Open Sans";
+    font-size:14px;
+    outline:none;
+    color:#fff;
+    border:none;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    background-color:#96aa39;
+    border-bottom:1px solid #7b8b2f;
+}
+#BTNunidad {
+    padding : 2px;
+    display:block; /* change this from inline-block */
+    height: 40px;
+    width:100%; /* setting the width */
+    float:right;
+    margin:3px auto; /* this will center  it */
+    position:relative;
+    font-style:normal;
+    font-weight:normal;
+    font-family:"Open Sans";
+    font-size:14px;
+    outline:none;
+    color:#010101;
+    border:none;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background-color:#339966;
+    border-bottom:1px solid #7b8b2f;
+}
+#BTNGroup {
+    padding : 2px;
+    display:block; /* change this from inline-block */
+    height: 40px;
+    width:100%; /* setting the width */
+    float:right;
+    margin:3px auto; /* this will center  it */
+    position:relative;
+    font-style:normal;
+    font-weight:normal;
+    font-family:"Open Sans";
+    font-size:14px;
+    outline:none;
+    color:#010101;
+    border:none;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background-color:#FF9900;
+    border-bottom:1px solid #7b8b2f;
+}
+#UNunidades {
+    float: left;
+    padding : 0.5em;
+    width: 90%;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-moz-box-shadow: 0px 0px 3px #000000;
+-webkit-box-shadow: 0px 0px 3px #000000;
+box-shadow: 0px 0px 3px #000000;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#4a4646', endColorstr = '#c2c0c0');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#4a4646', endColorstr = '#c2c0c0')";
+background-image: -moz-linear-gradient(left, #4a4646, #c2c0c0);
+background-image: -ms-linear-gradient(left, #4a4646, #c2c0c0);
+background-image: -o-linear-gradient(left, #4a4646, #c2c0c0);
+background-image: -webkit-gradient(linear, left top, right top, from(#4a4646), to(#c2c0c0));
+background-image: -webkit-linear-gradient(left, #4a4646, #c2c0c0);
+background-image: linear-gradient(left, #4a4646, #c2c0c0);
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+
+}
+#GroupList {
+    float: left;
+    padding : 0.5em;
+    width: 90%;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-moz-box-shadow: 0px 0px 3px #000000;
+-webkit-box-shadow: 0px 0px 3px #000000;
+box-shadow: 0px 0px 3px #000000;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#4a4646', endColorstr = '#c2c0c0');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#4a4646', endColorstr = '#c2c0c0')";
+background-image: -moz-linear-gradient(left, #4a4646, #c2c0c0);
+background-image: -ms-linear-gradient(left, #4a4646, #c2c0c0);
+background-image: -o-linear-gradient(left, #4a4646, #c2c0c0);
+background-image: -webkit-gradient(linear, left top, right top, from(#4a4646), to(#c2c0c0));
+background-image: -webkit-linear-gradient(left, #4a4646, #c2c0c0);
+background-image: linear-gradient(left, #4a4646, #c2c0c0);
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+}
+#OPmaps {
+    float: right;
+    padding : 0.5em;
+    width: 90%;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-moz-box-shadow: 0px 0px 3px #000000;
+-webkit-box-shadow: 0px 0px 3px #000000;
+box-shadow: 0px 0px 3px #000000;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#c2c0c0', endColorstr = '#4a4646');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#c2c0c0', endColorstr = '#4a4646')";
+background-image: -moz-linear-gradient(left, #c2c0c0, #4a4646);
+background-image: -ms-linear-gradient(left, #c2c0c0, #4a4646);
+background-image: -o-linear-gradient(left, #c2c0c0, #4a4646);
+background-image: -webkit-gradient(linear, left top, right top, from(#c2c0c0), to(#4a4646));
+background-image: -webkit-linear-gradient(left, #c2c0c0, #4a4646);
+background-image: linear-gradient(left, #c2c0c0, #4a4646);
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+
+}
+#OPinfo {
+    float: right;
+    padding : 0.5em;
+    width: 90%;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-moz-box-shadow: 0px 0px 3px #000000;
+-webkit-box-shadow: 0px 0px 3px #000000;
+box-shadow: 0px 0px 3px #000000;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#c2c0c0', endColorstr = '#4a4646');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#c2c0c0', endColorstr = '#4a4646')";
+background-image: -moz-linear-gradient(left, #c2c0c0, #4a4646);
+background-image: -ms-linear-gradient(left, #c2c0c0, #4a4646);
+background-image: -o-linear-gradient(left, #c2c0c0, #4a4646);
+background-image: -webkit-gradient(linear, left top, right top, from(#c2c0c0), to(#4a4646));
+background-image: -webkit-linear-gradient(left, #c2c0c0, #4a4646);
+background-image: linear-gradient(left, #c2c0c0, #4a4646);
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+
+}
+#OPlogout {
+    float: right;
+    padding : 0.5em;
+    width: 90%;
+    border:1px;
+	border-style:solid;
+    background:#dfdfdf url(../images/messages.gif)repeat-x;
+    background-size:contain;
+}
+.BTNopciones {
+    padding : 2px;
+    display:block; /* change this from inline-block */
+    height: 40px;
+    width:100%; /* setting the width */
+    float:left;
+    margin:3px auto; /* this will center  it */
+    position:relative;
+    font-style:normal;
+    font-weight:normal;
+    font-family:"Open Sans";
+    font-size:14px;
+    outline:none;
+    color:#000000;
+    border:none;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background-color:#33CCCC;
+    border-bottom:1px solid #7b8b2f;
+}
+.BTNopciones:hover,
+#BTNGroup:hover,
+#BTNunidad:hover,
+.col2:hover,
+.col3:hover {
+-moz-box-shadow: inset 0px 0px 8px #000000;
+-webkit-box-shadow: inset 0px 0px 8px #000000;
+box-shadow: inset 0px 0px 8px #000000;
+
+}
+.BTNopciones.off {
+    background-color: white;
+    color: black;
+}
+
+#JG {
+background-color: #ffffff;
+border: 2px solid #999999;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+-moz-box-shadow: 0px 0px 3px #000000;
+-webkit-box-shadow: 0px 0px 3px #000000;
+box-shadow: 0px 0px 3px #000000;
+opacity: 0.75;
+-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 75);
+filter: alpha(opacity = 75);
+
+}
+#logo {
+background-color: #ffffff;
+border: 2px solid #999999;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+-moz-box-shadow: 0px 0px 3px #000000;
+-webkit-box-shadow: 0px 0px 3px #000000;
+box-shadow: 0px 0px 3px #000000;
+opacity: 0.75;
+-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 75);
+filter: alpha(opacity = 75);
+
+}
+/* column container */
+.colmask {
+	position:relative;	/* This fixes the IE7 overflow hidden bug */
+	clear:both;
+	float:left;
+	width:100%;			/* width of whole page */
+	overflow:hidden;		/* This chops off any overhanging divs */
+
+}
+
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+	float:left;
+	width:100%;			/* width of page */
+	position:relative;
+}
+.col1,
+.col2,
+.col3 {
+	float:left;
+	position:relative;
+	/* no left and right padding on columns, we just make them narrower instead 
+					only padding top and bottom is included here, make it whatever value you need */
+	overflow:hidden;
+}
+/* 3 Column settings */
+.threecol {
+
+			/* right column background colour */
+}
+.threecol .colmid {
+	right:25%;			/* width of the right column */	
+    height: 40px;
+    text-align:center;
+    line-height: 20px;
+    font-size:14px;
+
+}
+.threecol .colleft {
+    
+    right:50%;			/* width of the middle column */
+		/* left column background colour */
+}
+.threecol .col1 {
+	width:46%;			/* width of center column content (column width minus padding on either side) */
+	left:102%;			/* 100% plus left padding of center column */
+}
+.threecol .col2 {
+
+    
+	width:21%;			/* Width of left column content (column width minus padding on either side) */
+	left:31%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+}
+.threecol .col3 {
+
+	width:21%;			/* Width of right column content (column width minus padding on either side) */
+	left:85%;			/* Please make note of the brackets here:
+					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+}
