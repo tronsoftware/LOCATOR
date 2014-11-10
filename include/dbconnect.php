@@ -1,9 +1,9 @@
 <?php
 
-$dbhost = 'localhost';
-$dbuser = 'root';
+$dbhost = 'localhost'; //host:port de el SQL Server
+$dbuser = 'root'; // Usuario con privilegios ALL sobre BD
 $dbpass = '+++++';
-$dbname = 'gts';
+$dbname = 'gts'; // Normalmente gts
 
 $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
