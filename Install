@@ -1,0 +1,19 @@
+Para vincular esta Web-App a GTS es necesario tener :
+-Apache webserver con modulo PHP.
+-Servidor MySql.
+-OpenGts o GTS Enterprise con modulo EVENTS instalado.
+  para instalar EVENTS en GTE/OpenGTS ejecutar en $GTS_HOME los comandos:
+    ant events
+    ant events.deploy
+
+Instalacion:
+  -Ejecutar Locator.sql en la Base de Datos GTE para incluir los ProcDB necesarios.(por medio de PhpMyadmin,Wemadmin,HeidiSQL o cualquier administrador de MySql)
+  -Copiar el contenido en un directorio accesible (www/locator o html/locator).
+  -Configurar include/dbconnect.php , include/membersite_config.php y poner los valores para conectar a la Base de Datos.
+  -configurar include/getGroupData.php , include/getUnitData.php , include/getUnits.php con la URL completa de el Servidor GTS.
+Uso:
+  al ingresar a index.php, se les solicite sus credenciales (account/user/pass) y se muestran solo las unidades y grupos correspondientes.
+  Nota: es obligatorio ingresar los tres campos account/user/pass no es posible ingresar solo con account/pass.
+  Por ejemplo: Si quiere entrar con sysadmin/pass debes crear un usuario "admin" en GTS e ingresar con sysadmin/admin/pass .
+
+Consultas/Dudas/Sugerencias => tron@3tech.com.ar tronsoftware@gmail.com
