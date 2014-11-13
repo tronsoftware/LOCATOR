@@ -12,7 +12,8 @@ Instalacion:
   -Configurar include/dbconnect.php , include/membersite_config.php y poner los valores para conectar a la Base de Datos.
   -configurar include/getGroupData.php , include/getUnitData.php , include/getUnits.php con la URL completa de el Servidor GTS.
 Uso:
-  al ingresar a index.php, se les solicite sus credenciales (account/user/pass) y se muestran solo las unidades y grupos correspondientes.
+  al ingresar a index.php, se les solicita sus credenciales (account/user/pass) y se muestran solo las unidades y grupos correspondientes.
+  
   Nota: es obligatorio ingresar los tres campos account/user/pass no es posible ingresar solo con account/pass.
   Por ejemplo: Si quiere entrar con sysadmin/pass debes crear un usuario "admin" en GTS e ingresar con sysadmin/admin/pass .
 
