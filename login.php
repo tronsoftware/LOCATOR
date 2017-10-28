@@ -70,7 +70,7 @@ Uses the excellent form validation script from JavaScript-coder.com-->
     frmvalidator.EnableOnPageErrorDisplay();
     frmvalidator.EnableMsgsTogether();
     
-    frmvalidator.addValidation("accoun","req","Introdusca su Cuenta");
+    frmvalidator.addValidation("account","req","Introdusca su Cuenta");
     
     frmvalidator.addValidation("username","req","Introdusca su  Usuario");
     
